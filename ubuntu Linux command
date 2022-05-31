@@ -1,0 +1,23 @@
+    bluetooth.set_l2cap_mtu(sock, mtu)
+  File "/usr/local/lib/python3.10/dist-packages/bluetooth/bluez.py", line 150, in set_l2cap_mtu
+    set_l2cap_options (sock, options)
+  File "/usr/local/lib/python3.10/dist-packages/bluetooth/bluez.py", line 136, in set_l2cap_options
+    sock.setsockopt (SOL_L2CAP, L2CAP_OPTIONS, s)
+  File "<string>", line 3, in setsockopt
+SystemError: PY_SSIZE_T_CLEAN macro must be defined for '#' formats
+ubuntu@ubuntu:~/Desktop/CVE-2017-0785-master$ sudo python3 CVE-2017-0785.py TARGET=7A:13:77:47:BE:A0
+[◢] Exploit: Creating L2CAP socket
+Traceback (most recent call last):
+  File "/home/ubuntu/Desktop/CVE-2017-0785-master/CVE-2017-0785.py", line 27, in <module>
+    bluetooth.set_l2cap_mtu(sock, mtu)
+  File "/usr/local/lib/python3.10/dist-packages/bluetooth/bluez.py", line 150, in set_l2cap_mtu
+    set_l2cap_options (sock, options)
+  File "/usr/local/lib/python3.10/dist-packages/bluetooth/bluez.py", line 136, in set_l2cap_options
+    sock.setsockopt (SOL_L2CAP, L2CAP_OPTIONS, s)
+  File "<string>", line 3, in setsockopt
+SystemError: PY_SSIZE_T_CLEAN macro must be defined for '#' formats
+ubuntu@ubuntu:~/Desktop/CVE-2017-0785-master$ ls
+CVE-2017-0785.py  README.md
+ubuntu@ubuntu:~/Desktop/CVE-2017-0785-master$ cd ..
+ubuntu@ubuntu:~/Desktop$ 
+
